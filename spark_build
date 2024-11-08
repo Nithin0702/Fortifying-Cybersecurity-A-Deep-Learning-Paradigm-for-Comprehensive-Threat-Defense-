@@ -1,0 +1,15 @@
+FROM python:latest
+
+WORKDIR /app
+
+# Install Java
+RUN apt-get update && apt-get install -y default-jdk
+
+RUN pip install pyspark
+RUN pip install git+https://github.com/dpkp/kafka-python.git
+RUN pip install pymongo
+RUN pip install requests
+
+COPY subscriber.py /app
+
+CMD ["python", "subscriber.py"]

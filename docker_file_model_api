@@ -1,0 +1,13 @@
+FROM bitnami/pytorch:latest
+WORKDIR /app
+COPY model.pth /app/model.pth
+
+RUN pip install flask
+RUN pip install torch==2.1.1+cpu --index-url https://download.pytorch.org/whl/cpu
+
+COPY model_api.py /app/model_api.py
+
+EXPOSE 5000
+
+CMD ["python", "model_api.py"]
+

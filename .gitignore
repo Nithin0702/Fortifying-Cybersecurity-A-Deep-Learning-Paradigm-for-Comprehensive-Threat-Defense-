@@ -1,0 +1,32 @@
+# Django project
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit tests
+*.cover
+.hypothesis/
+
+# Django specific
+local_settings.py
+secret_key.py
+
+devcontainer.json
+settings.json
+runs/
+
+.vscode/
+.devcontainer/
